@@ -31,6 +31,7 @@ float maprad = 40;
 boolean playerLevelUp = false; 
 
 void setup() {
+  surface.setTitle("Bubble Tanks");
   size(700, 800);
   fill(200);
   bubble = createFont("silkscreen.ttf", 72);
@@ -114,7 +115,7 @@ void draw() {
     drawBubbles(tank.getX(), tank.getY());
     
     fill(255, 100);
-    rect(0, 695, 700, 5);
+    rect(0, 695, 700, 2.5);
     fill(1, 135, 155, 100);
     noStroke();
     rect(0, 700, 700, 100);
@@ -124,14 +125,14 @@ void draw() {
     strokeJoin(MITER);
     strokeCap(SQUARE);
     stroke(46, 89, 47);
-    rect(25, 720, 200, 20);
+    rect(55, 720, 160, 20);
 
     fill(1, 24, 45);
     strokeWeight(3);
     strokeJoin(MITER);
     strokeCap(SQUARE);
     stroke(1, 24, 45);
-    rect(25, 760, 200, 20);
+    rect(55, 760, 160, 20);
 
     float percentPoint = (float)player.getPoints()/ player.getMaxPoints();
     float percentHealth = tank.getHealth() / tank.getMaxHealth();
@@ -141,24 +142,31 @@ void draw() {
 
     fill(72, 139, 73);
     noStroke();
-    rect(26.5, 721.5, percentHealth*197.5, 17.5);
+    rect(56.5, 721.5, percentHealth*157.5, 17.5);
 
     fill(3, 64, 120);
     noStroke();
-    rect(26.5, 761.5, percentPoint *197.5, 17.5);
+    rect(56.5, 761.5, percentPoint*157.5, 17.5);
 
-    // test for health
+    fill(255);
+    textAlign(RIGHT);
+    textFont(ptmono);
+    textSize(12); 
+    text("HP", 40, 736);
+    text("EXP", 40, 776);
+
+    // text for health
     fill(255);
     if (percentHealth > 0.66) {
       textAlign(RIGHT);
       textFont(ptmono);
       textSize(12); 
-      text((int)(percentHealth*100) + "%", 20 + (int)(percentHealth*200), 736);
+      text((int)(percentHealth*100) + "%", 50 + (int)(percentHealth*160), 736);
     } else {
       textAlign(LEFT);
       textFont(ptmono);
       textSize(12); 
-      text((int)(percentHealth*100) + "%", 26.5 + (int)(percentHealth*200), 736);
+      text((int)(percentHealth*100) + "%", 56.5 + (int)(percentHealth*160), 736);
     }
 
     // text for bubble points
@@ -172,12 +180,12 @@ void draw() {
       textAlign(RIGHT);
       textFont(ptmono);
       textSize(12); 
-      text((int)(percentPoint*100) + "%", 20 + (int)(percentPoint*200), 776);
+      text((int)(percentPoint*100) + "%", 50 + (int)(percentPoint*160), 776);
     } else {
       textAlign(LEFT);
       textFont(ptmono);
       textSize(12);
-      text((int)(percentPoint*100) + "%", 26.5 + (int)(percentPoint*200), 776);
+      text((int)(percentPoint*100) + "%", 56.5 + (int)(percentPoint*160), 776);
     }
     
     int[][] coolDowns = tank.getCoolDowns();
@@ -529,6 +537,14 @@ void keyPressed() {
     }
   } else {
     tank.setMovement(keyCode, 1);
+  }
+  // press L to skip menu stuff
+  if (keyCode == 76) {
+    difficulty = 1;
+    mapSize = 5;
+    useMouse = true;
+    m = new Map(mapSize, difficulty);
+    menuSetting =7;
   }
   if (keyCode == 86) {
     showMap = !showMap;
