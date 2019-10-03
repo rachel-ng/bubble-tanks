@@ -12,7 +12,7 @@ public abstract class BubbleTank {
     this.health = health;
     this.maxHealth = health;
     this.id = id;
-    this.speed = speed;
+    this.speed = speed/2;
     this.radius = radius;
     x = 0;
     y = 0;
