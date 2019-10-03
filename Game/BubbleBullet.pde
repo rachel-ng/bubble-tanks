@@ -8,7 +8,7 @@ public class BubbleBullet {
     this.x = x+cos(direction)*tankRadius;
     this.y = y+sin(direction)*tankRadius;
     this.radius = radius;
-    this.speed = speed;
+    this.speed = speed / 2;
     this.id=id;
     this.tankRadius = tankRadius;
   }
