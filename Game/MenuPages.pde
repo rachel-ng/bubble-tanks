@@ -904,8 +904,8 @@ public class MenuPages {
     textSize(84);
     text("you lost", 350, 200); 
     textSize(36);
-    text("It is really sad", 350, 275); // starts at 207 ends at 250
-    text("that you lost the game.", 350, 325); 
+    text("oh no :(", 350, 275); // starts at 207 ends at 250
+    text("do you want to", 350, 325); 
     text("try again?", 350, 375); 
     
     fill(242, 245, 252);
