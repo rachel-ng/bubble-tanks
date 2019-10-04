@@ -19,13 +19,13 @@ A top down shooter game with Bubble Tanks with different types of upgrades and e
 ## Running The Game
 * First, you need to clone this repository.
 ```
-git clone https://github.com/JasonLin43212/Bubble-Tanks-Final-Project.git
+git clone git@github.com:rachel-ng/bubble-tanks.git
 ```
 * If you can use the `processing` command in your terminal, open it in the terminal.
 ```
-cd Bubble-Tanks-Final-Project/
+cd bubble-tanks/
 cd Game/
-processing Game.pde
+open Game.pde
 ```
 * If you cannot use that command, simply open up Processing 3 and go to `File > Open...` and choose `Game.pde` in the Bubble-Tanks-Final-Project directory.
 
