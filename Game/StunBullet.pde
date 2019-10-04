@@ -9,9 +9,9 @@ public class StunBullet extends BubbleBullet{
    }
    
    public void display() {
-     setBlock(new BubbleBlock(x, y, radius, direction, color(247, 237, 179)));
-    getBlock().display();
-  }
+      setBlock(new BubbleBlock(x, y, radius, direction, color(247, 237, 179)));
+      getBlock().display();
+   }
    
    public int getStunTime(){
       return stunTime; 
