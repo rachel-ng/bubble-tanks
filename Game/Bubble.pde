@@ -20,10 +20,13 @@ public class Bubble {
   public void move(float dx, float dy) {
     float angle = atan2(dy-y, dx-x);
     float dist = dist(dx,dy,x,y);
-    if (dist < 50) {
+    if (dist < 100) {
       x += 10*cos(angle);
       y += 10*sin(angle);
-    } else if (dist < 150) {
+    } else if (dist < 200) {
+      x += 7.5*cos(angle);
+      y += 7.5*sin(angle);
+    } else if (dist < 300) {
       x += 5*cos(angle);
       y += 5*sin(angle);
     }
