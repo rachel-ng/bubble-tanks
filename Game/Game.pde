@@ -115,8 +115,8 @@ void draw() {
     drawBubbles(tank.getX(), tank.getY());
     
     fill(255, 100);
-    rect(0, 695, 700, 2.5);
-    fill(1, 135, 155, 100);
+    rect(0, 697.5, 700, 2.5);
+    fill(1, 88, 101, 120);
     noStroke();
     rect(0, 700, 700, 100);
 
