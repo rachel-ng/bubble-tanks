@@ -22,11 +22,14 @@ public class Room {
     //checkning up
     availableRooms[3] = row-1>=0;
     int manhattanDist = abs(row - ((mapSize-1)/2)) + abs(col - ((mapSize-1)/2));
-    int numEnemies = (int) (random(manhattanDist) + (manhattanDist+3))+ difficulty; 
-    numEnemies = 10;
+    int numEnemies = (int) (random(manhattanDist) + (manhattanDist+3))+ difficulty; // orig
+    //int numEnemies = (int) (random(manhattanDist) + (manhattanDist+3)) + (int)(difficulty / 2); 
+    if (manhattanDist == 0) {
+      numEnemies *= random(difficulty) + 1; 
+    }
     allEnemyTanks = new ArrayList<EnemyTank>();
     for (int i=0; i<numEnemies; i++){
-       int type = (int) (random(3)+manhattanDist);
+       int type = (int) (random(3)+random(manhattanDist));
        int id = maxID;
        maxID++;
        //health,radius,id,speed,type,coolDown
