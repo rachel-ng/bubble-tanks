@@ -10,12 +10,27 @@ public class PlayerTank extends BubbleTank {
 
     this.type = type;
   }
+  
+  public float rotX (float angle, float cx, float cy, float px, float py) {
+    return cos(angle) * (px - cx) - sin(angle) * (py-cy) + cx;
+  }
+  
+  public float rotY (float angle, float cx, float cy, float px, float py) {
+    return sin(angle) * (px - cx) - cos(angle) * (py-cy) + cx;
+  }
 
   public void display() {
     super.display();   
     buildBlocks();
     for (int i=0; i<blocks.size(); i++) {
       blocks.get(i).display();
+    }
+    if (m.currentRoom.getEnemies().size() == 1) {
+      BubbleTank survivor = m.currentRoom.getEnemies().get(0);
+      float angle = atan2(-survivor.getY()+350, -survivor.getX()+350);
+  
+      fill(255, 190);
+      triangle(rotX(angle,350-7.5,350-2*getRadius(),350,350), rotY(angle,350-7.5,350-2*getRadius(),350,350), rotX(angle,350,350-2*getRadius()-15,350,350), rotY(angle,350,350-2*getRadius()-15,350,350), rotX(angle,350+7.5, 350-2*getRadius(),350,350), rotY(angle,350+7.5, 350-2*getRadius(),350,350));
     }
   }
 
@@ -26,9 +41,9 @@ public class PlayerTank extends BubbleTank {
     }
   }
 
-public void setType(int val){
-   type = val; 
-}
+  public void setType(int val){
+     type = val; 
+  }
   // creates the tank depending on what type it is
   public void buildBlocks() {
     blocks.clear();
