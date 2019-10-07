@@ -76,7 +76,14 @@ Have Fun!
   To fix this, click back inside the game and use the  `W`  `A`  `S`  `D`  keys to move in the direction that the tank is currently moving in. It should stop the tank from moving any further.
 
 ## To Do List 
+
+### Tanks
 - [ ] indicator for remaining enemies 
   - [ ] indicator for last enemy 
+
+### Rooms
 - [ ] faster movement through cleared rooms
 - [ ] hardness of enemies in current room scale to player level 
+
+### Extras 
+- [ ] make a demo vid!! 
