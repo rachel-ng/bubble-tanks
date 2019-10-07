@@ -1,20 +1,5 @@
 # Bubble-Tanks-Final-Project
 A top down shooter game with Bubble Tanks with different types of upgrades and enemies.
-## Features
-* The ability to move around and shoot with keyboard and mouse.
-* The ability to kill enemies or get klled.
-* Different player models that change as you progress.
-* Transfering between different rooms with their own enemies.
-* Have a health and experience bar to indicate progress.
-* A map to show current location and where you have been.
-
-## Features after Demo
-* Special attacks that deal massive damage on enemies.
-* Unique bosses with their own patterns of attack.
-* Picking your own upgrades to fight enemies with.
-* A win and losing screen.
-* A better looking map.
-* Map boundries.
 
 ## Running The Game
 * First, you need to clone this repository.
@@ -68,6 +53,22 @@ Finally, you use `Ctrl-R` to run the game.
   These also come with cooldowns which are indicated by the 4 circles next to the health and EXP bars. 
   
 Have Fun!
+
+## Features
+* The ability to move around and shoot with keyboard and mouse.
+* The ability to kill enemies or get klled.
+* Different player models that change as you progress.
+* Transfering between different rooms with their own enemies.
+* Have a health and experience bar to indicate progress.
+* A map to show current location and where you have been.
+
+## Features after Demo
+* Special attacks that deal massive damage on enemies.
+* Unique bosses with their own patterns of attack.
+* Picking your own upgrades to fight enemies with.
+* A win and losing screen.
+* A better looking map.
+* Map boundries.
 
 ## Bugs That Do Not Affect Gameplay
 * When transfering between rooms, you can catch a glimpse of what is in the other room before transfering.
