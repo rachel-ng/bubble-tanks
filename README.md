@@ -38,10 +38,10 @@ Finally, you use `Ctrl-R` to run the game.
 
 * **Upgrading**  
   When you get enough EXP, indicated by the blue bar below the green health bar, you'll be able to pick your own upgrades. You'll end up maxing everything out (you can allocate at most 4 upgrades to each), but for now, pick whichever one you like the best.
-  * Odd Levels: You get to choose between the `Blaster` the `Cannon` and the `Machine Gun`.
-  * Even Levels: These are your specialattacks, you get to choose between the `Missiles` the `Stun` and the `Area Burst`.
-  * Level 10: These are your super attacks, choose carefully because you only get one:  
-    the `Super Missile` the `Super Blaster` and the `Super Cannon`.
+  * **Odd Levels**: You get to choose between the `1: Blaster` the `2: Cannon` and the `3: Machine Gun`.
+  * **Even Levels**: These are your specialattacks, you get to choose between the `1: Missiles` the `2: Stun` and the `3: Area Burst`.
+  * **Level 10**: These are your super attacks, choose carefully because you only get one:  
+    the `1: Super Missile` the `2: Super Blaster` and the `S3: uper Cannon`.
     
 * **Special Attacks**  
   You get to use the  `1`  `2`  `3`  `4` keys for these. 
