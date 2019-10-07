@@ -539,24 +539,78 @@ void keyPressed() {
     tank.setMovement(keyCode, 1);
   }
   // press L to skip menu stuff
-  if (keyCode == 76) {
+  if (keyCode == 76 && menuSetting < 6) {
     difficulty = 1;
     mapSize = 5;
     useMouse = true;
     m = new Map(mapSize, difficulty);
-    menuSetting =7;
+    menuSetting = 7;
   }
   if (keyCode == 86) {
     showMap = !showMap;
   }
-  if (keyCode == 49) { // 1
+  if (keyCode == 49 && !playerLevelUp) { // 1
     tank.activateMissile();
+  } 
+  if (keyCode == 49 && playerLevelUp) {
+    if (player.getLevel() % 2 == 1 && player.getLevel() != 11) {
+      if (tank.addBlaster()) {
+        playerLevelUp = false;
+      }
+    }
+    // even levels
+    if (player.getLevel() % 2 == 0 && player.getLevel() != 11) {
+      if (tank.addMissile()) {
+        playerLevelUp = false;
+      }
+    }
+    // level 10 (aka super attack)
+    if (player.getLevel() == 11) {
+      tank.addSuperAttack(1);
+      playerLevelUp = false;
+    }
   }
-  if (keyCode == 50) { // 2
+  if (keyCode == 50 && !playerLevelUp) { // 2
     tank.activateStun();
   }
-  if (keyCode == 51) { // 3  
+  if (keyCode == 50 && playerLevelUp) {
+    if (player.getLevel() % 2 == 1 && player.getLevel() != 11) {
+      if (tank.addBlaster()) {
+        playerLevelUp = false;
+      }
+    }
+    // even levels
+    if (player.getLevel() % 2 == 0 && player.getLevel() != 11) {
+      if (tank.addMissile()) {
+        playerLevelUp = false;
+      }
+    }
+    // level 10 (aka super attack)
+    if (player.getLevel() == 11) {
+      tank.addSuperAttack(1);
+      playerLevelUp = false;
+    }
+  }
+  if (keyCode == 51 && !playerLevelUp) { // 3  
     tank.activateAreaBurst();
+  }   
+  if (keyCode == 51 && playerLevelUp) {
+    if (player.getLevel() % 2 == 1 && player.getLevel() != 11) {
+      if (tank.addBlaster()) {
+        playerLevelUp = false;
+      }
+    }
+    // even levels
+    if (player.getLevel() % 2 == 0 && player.getLevel() != 11) {
+      if (tank.addMissile()) {
+        playerLevelUp = false;
+      }
+    }
+    // level 10 (aka super attack)
+    if (player.getLevel() == 11) {
+      tank.addSuperAttack(1);
+      playerLevelUp = false;
+    }
   }
   if (keyCode == 52) { // 4
     tank.activateSuper();
