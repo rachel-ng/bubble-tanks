@@ -55,6 +55,8 @@ Finally, you use `Ctrl-R` to run the game.
 Have Fun!
 
 ## Features
+
+### Original Features
 * The ability to move around and shoot with keyboard and mouse.
 * The ability to kill enemies or get klled.
 * Different player models that change as you progress.
@@ -62,7 +64,7 @@ Have Fun!
 * Have a health and experience bar to indicate progress.
 * A map to show current location and where you have been.
 
-## Features after Demo
+### Features after Demo
 * Special attacks that deal massive damage on enemies.
 * Unique bosses with their own patterns of attack.
 * Picking your own upgrades to fight enemies with.
@@ -70,10 +72,17 @@ Have Fun!
 * A better looking map.
 * Map boundries.
 
-## Bugs That Do Not Affect Gameplay
+### Features Recently Added 
+* Slower movement speed 
+* No longer able to leave rooms without clearing them unless you are in a boss room or next to one.
+* Use keyboard to pick your upgrades. 
+
+## Bugs
+
+### Bugs That Do Not Affect Gameplay
 * When transfering between rooms, you can catch a glimpse of what is in the other room before transfering.
 
-## Bugs That Do Affect Gameplay
+### Bugs That Do Affect Gameplay
 * If you are moving and then decide to click outside of the window, your tank will continue to move.  
   To fix this, click back inside the game and use the  `W`  `A`  `S`  `D`  keys to move in the direction that the tank is currently moving in. It should stop the tank from moving any further.
 
