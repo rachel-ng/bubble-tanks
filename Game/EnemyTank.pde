@@ -1,4 +1,3 @@
-
 public class EnemyTank extends BubbleTank {
 
   private int type;
@@ -310,9 +309,9 @@ public class EnemyTank extends BubbleTank {
     }
     //Go towards your destination
     if (getStunPeriod() <= 0){
-    setX(getX()+cos(goToAngle)*getSpeed());
-    setY(getY()+sin(goToAngle)*getSpeed());
-    distanceSoFar += getSpeed();
+      setX(getX()+cos(goToAngle)*getSpeed());
+      setY(getY()+sin(goToAngle)*getSpeed());
+      distanceSoFar += getSpeed();
     }
 }
 

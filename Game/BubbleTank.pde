@@ -30,11 +30,13 @@ public abstract class BubbleTank {
     transferDistance = 0;
     transferSpeed = 0;
     transferedSoFar = 0;
+        
     if (id!=0) {
       isShooting=1;
     } else {
       isShooting = 0;
     }
+    
     blocks = new ArrayList<BubbleBlock>();
 
     this.blaster = 0; // 0
