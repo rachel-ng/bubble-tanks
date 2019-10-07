@@ -74,13 +74,19 @@ Have Fun!
 
 ## To Do List 
 
+### Menu 
+- [ ] add menu directions for using keyboard to choose upgrades
+
 ### Tanks
 - [ ] indicator for remaining enemies 
   - [ ] indicator for last enemy 
 
 ### Rooms
 - [ ] faster movement through cleared rooms
-- [ ] hardness of enemies in current room scale to player level 
+- [ ] hardness of enemies / rooms scale to player level 
+  - [ ] HP of enemies 
+  - [ ] # of enemies 
+  - [ ] manhattan distance + # rooms cleared + player level ( ??? maybe ) 
 
 ### Extras 
 - [ ] make a demo vid!! 
