@@ -5,11 +5,12 @@ public class Bull extends BubbleTank {
   int bossCoolDown;
   boolean shielded;
   boolean preventMovement;
-  public Bull(int difficulty) {
-    super(3000 + difficulty*500 + bossesKilled*1000, 80, -10, difficulty);
+  public Bull(int difficulty, int playerLevel) {
+    super(3000 + difficulty*500 + playerLevel*20 + bossesKilled*1000, 80, -10, difficulty);
     bossCoolDown = 500 - difficulty*20;
     shielded = false;
     preventMovement = false;
+    println("bull boss");
   }
 
   public void updatedType() {

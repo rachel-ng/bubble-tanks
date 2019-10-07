@@ -4,9 +4,10 @@ public class Stationary extends BubbleTank {
   color internal = color(214, 149, 9);
   int bossCoolDown;
 
-  public Stationary(int difficulty) {
-    super(3000 + difficulty*500 + bossesKilled*1000, 60, -666,0);
+  public Stationary(int difficulty, int playerLevel) {
+    super(3000 + difficulty*500 + playerLevel*20 + bossesKilled*1000, 60, -666,0);
     bossCoolDown = 500 - difficulty*20;
+    println("stationary boss");
   }
 
   public void updatedType() {

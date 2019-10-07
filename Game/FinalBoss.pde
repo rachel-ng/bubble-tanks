@@ -5,11 +5,12 @@ public class FinalBoss extends BubbleTank {
   int bossCoolDown;
   boolean shielded;
   boolean preventMovement;
-  public FinalBoss(int difficulty) {
-    super(8000 + difficulty*1000 + bossesKilled*2000, 150, -109, difficulty);
+  public FinalBoss(int difficulty, int playerLevel) {
+    super(8000 + difficulty*1000 + playerLevel*40 + bossesKilled*2000, 150, -109, difficulty);
     bossCoolDown = 1000 - difficulty*20;
     shielded = false;
     preventMovement = false;
+    println("final boss");
   }
 
   public void updatedType() {
