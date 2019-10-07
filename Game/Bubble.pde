@@ -31,8 +31,22 @@ public class Bubble {
       y += 5*sin(angle);
     }
     else if (isCleared){
-      x += 12*cos(angle);
-      y += 12*sin(angle);
+      if (dist < 250) {
+        x += 15*cos(angle);
+        y += 15*sin(angle);
+      } else if (dist < 500) {
+        x += 50*cos(angle);
+        y += 50*sin(angle);
+      } else if (dist < 750) {
+        x += 80*cos(angle);
+        y += 80*sin(angle);
+      } else if (dist < 1000) {
+        x += 90*cos(angle);
+        y += 90*sin(angle);
+      } else if (dist < 1500) {
+        x += 100*cos(angle);
+        y += 100*sin(angle);
+      }
     }
     if (dist(x, y, 0, 0)>1000-radius) {
       x = 1000 * cos(atan2(y, x));
