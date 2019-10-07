@@ -30,7 +30,10 @@ public class PlayerTank extends BubbleTank {
       float angle = atan2(-survivor.getY()+350, -survivor.getX()+350);
   
       fill(255, 190);
-      triangle(rotX(angle,350-7.5,350-2*getRadius(),350,350), rotY(angle,350-7.5,350-2*getRadius(),350,350), rotX(angle,350,350-2*getRadius()-15,350,350), rotY(angle,350,350-2*getRadius()-15,350,350), rotX(angle,350+7.5, 350-2*getRadius(),350,350), rotY(angle,350+7.5, 350-2*getRadius(),350,350));
+      triangle(rotX(angle, 350-7.5,350-2*getRadius(), 350, 350), rotY(angle, 350-7.5, 350-2*getRadius(), 350, 350), 
+               rotX(angle, 350, 350-2*getRadius()-15, 350, 350), rotY(angle, 350, 350-2*getRadius()-15, 350, 350), 
+               rotX(angle, 350+7.5, 350-2*getRadius(), 350, 350), rotY(angle, 350+7.5, 350-2*getRadius(), 350, 350)
+               );
     }
   }
 
