@@ -34,7 +34,12 @@ public class Map {
   }
 
   public boolean canChangeRoom(int changeTo) {
-    return currentRoom.getAvailable()[changeTo];
+    if (currentRoom.getEnemies().size() == 0 || (currentRoomR()+coordRooms[changeTo][0] == bossRow && currentRoomC()+coordRooms[changeTo][1] == bossCol)) {
+      return currentRoom.getAvailable()[changeTo];
+    }
+    else {
+      return false;  
+    }
   }
 
   public int currentRoomR () { 
@@ -68,7 +73,7 @@ public class Map {
           bossRow = (int)(random(n));
           bossCol = (int)(random(n));
         }
-        rooms[bossRow][bossCol] = new BossRoom(n, bossRow, bossCol, difficulty, 1);
+        rooms[bossRow][bossCol] = new BossRoom(n, bossRow, bossCol, difficulty, player.getLevel(), 1);
         hasBoss = true;
       }
       if (bossesKilled == 1 && cleared >=n*n/2) {
@@ -76,7 +81,7 @@ public class Map {
           bossRow = (int)(random(n));
           bossCol = (int)(random(n));
         }
-        rooms[bossRow][bossCol] = new BossRoom(n, bossRow, bossCol, difficulty, 0);
+        rooms[bossRow][bossCol] = new BossRoom(n, bossRow, bossCol, difficulty, player.getLevel(), 0);
         hasBoss = true;
       }
       if (bossesKilled == 2 && cleared >=n*n/1.33) {
@@ -84,7 +89,7 @@ public class Map {
           bossRow = (int)(random(n));
           bossCol = (int)(random(n));
         }
-        rooms[bossRow][bossCol] = new BossRoom(n, bossRow, bossCol, difficulty, 2);
+        rooms[bossRow][bossCol] = new BossRoom(n, bossRow, bossCol, difficulty, player.getLevel(), 2);
         hasBoss = true;
       }
       if (bossesKilled == 3 && cleared >=n*n) {
@@ -92,7 +97,7 @@ public class Map {
           bossRow = (int)(random(n));
           bossCol = (int)(random(n));
         }
-        rooms[bossRow][bossCol] = new BossRoom(n, bossRow, bossCol, difficulty, 3);
+        rooms[bossRow][bossCol] = new BossRoom(n, bossRow, bossCol, difficulty, player.getLevel(), 3);
         hasBoss = true;
       }
     }

@@ -6,10 +6,11 @@ public class Shield extends BubbleTank {
   boolean shielded;
   float closeFactor = 1;
 
-  public Shield(int difficulty) {
-    super(3000 + difficulty*500 + bossesKilled*1000, 40, -5, difficulty/2);
+  public Shield(int difficulty, int playerLevel) {
+    super(3000 + difficulty*500 + playerLevel*20 + bossesKilled*1000, 40, -5, difficulty/2);
     bossCoolDown = 500 - difficulty*20;
     shielded = false;
+    println("shield boss");
   }
 
   public void updatedType() {
