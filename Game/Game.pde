@@ -102,7 +102,7 @@ void draw() {
     translate(-tank.getX()+350, -tank.getY()+350);
     ellipse(0, 0, 1495, 1495);
     popMatrix();
-    m.spawnBoss();
+    m.spawnBoss(); // m.spawnBoss(false);
     drawEnemies(tank.getX(), tank.getY());
     tank.display();
     tank.move(m);
@@ -546,6 +546,11 @@ void keyPressed() {
     m = new Map(mapSize, difficulty);
     menuSetting = 7;
   }
+  /*
+  if (keyCode == 76 && menuSetting > 5) {
+    m.spawnBoss(true);
+  }
+  */
   if (keyCode == 86) {
     showMap = !showMap;
   }
