@@ -72,9 +72,11 @@ public class Map {
         while (bossRow==currentRoomR() &&bossCol==currentRoomC() || bossRow==-1 || bossCol==-1) {
           int changeTo = (int)(random(coordRooms.length));
           for (int i=0; i<coordRooms.length; i++) {
-            if (rooms[currentRoomR() + coordRooms[i][0]][currentRoomC() + coordRooms[i][1]].getEnemies().size() == 0) {
-              changeTo = i;
-              break;
+            if (currentRoomR() + coordRooms[i][0] < n && currentRoomR() + coordRooms[i][0] > -1 && currentRoomC() + coordRooms[i][1] < n && currentRoomC() + coordRooms[i][1] > -1) { 
+              if (rooms[currentRoomR() + coordRooms[i][0]][currentRoomC() + coordRooms[i][1]].getEnemies().size() == 0) {
+                changeTo = i;
+                break;
+              }
             }
           }
           bossRow = currentRoomR() + coordRooms[changeTo][0];
@@ -87,9 +89,11 @@ public class Map {
         while (bossRow==currentRoomR() &&bossCol==currentRoomC() || bossRow==-1 || bossCol==-1) {
           int changeTo = (int)(random(coordRooms.length));
           for (int i=0; i<coordRooms.length; i++) {
-            if (rooms[currentRoomR() + coordRooms[i][0]][currentRoomC() + coordRooms[i][1]].getEnemies().size() == 0) {
-              changeTo = i;
-              break;
+            if (currentRoomR() + coordRooms[i][0] < n && currentRoomR() + coordRooms[i][0] > -1 && currentRoomC() + coordRooms[i][1] < n && currentRoomC() + coordRooms[i][1] > -1) { 
+              if (rooms[currentRoomR() + coordRooms[i][0]][currentRoomC() + coordRooms[i][1]].getEnemies().size() == 0) {
+                changeTo = i;
+                break;
+              }
             }
           }
           bossRow = currentRoomR() + coordRooms[changeTo][0];
@@ -102,9 +106,11 @@ public class Map {
         while (bossRow==currentRoomR() &&bossCol==currentRoomC() || bossRow==-1 || bossCol==-1) {
           int changeTo = (int)(random(coordRooms.length));
           for (int i=0; i<coordRooms.length; i++) {
-            if (rooms[currentRoomR() + coordRooms[i][0]][currentRoomC() + coordRooms[i][1]].getEnemies().size() == 0) {
-              changeTo = i;
-              break;
+            if (currentRoomR() + coordRooms[i][0] < n && currentRoomR() + coordRooms[i][0] > -1 && currentRoomC() + coordRooms[i][1] < n && currentRoomC() + coordRooms[i][1] > -1) { 
+              if (rooms[currentRoomR() + coordRooms[i][0]][currentRoomC() + coordRooms[i][1]].getEnemies().size() == 0) {
+                changeTo = i;
+                break;
+              }
             }
           }
           bossRow = currentRoomR() + coordRooms[changeTo][0];
@@ -117,9 +123,11 @@ public class Map {
         while (bossRow==currentRoomR() &&bossCol==currentRoomC() || bossRow==-1 || bossCol==-1) {
           int changeTo = (int)(random(coordRooms.length));
           for (int i=0; i<coordRooms.length; i++) {
-            if (rooms[currentRoomR() + coordRooms[i][0]][currentRoomC() + coordRooms[i][1]].getEnemies().size() == 0) {
-              changeTo = i;
-              break;
+            if (currentRoomR() + coordRooms[i][0] < n && currentRoomR() + coordRooms[i][0] > -1 && currentRoomC() + coordRooms[i][1] < n && currentRoomC() + coordRooms[i][1] > -1) { 
+              if (rooms[currentRoomR() + coordRooms[i][0]][currentRoomC() + coordRooms[i][1]].getEnemies().size() == 0) {
+                changeTo = i;
+                break;
+              }
             }
           }
           bossRow = currentRoomR() + coordRooms[changeTo][0];
