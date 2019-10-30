@@ -4,7 +4,7 @@ public class PlayerTank extends BubbleTank {
   color internal = color(214, 149, 9);
 
   // private int blaster, cannon, machinegun, missile, stunburst, areablast, superattack;
-d
+
   public PlayerTank(float health, float radius, int id, float speed,int type) {
     super(health, radius, id, speed);
 

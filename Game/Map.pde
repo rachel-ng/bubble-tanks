@@ -58,7 +58,7 @@ public class Map {
     return rooms;
   }
 
-  public void spawnBoss() {
+  public void spawnBoss() { // boolean force
     if (!hasBoss) {
       int cleared=0;
       for (int i=0; i<rooms.length; i++) {
@@ -68,34 +68,62 @@ public class Map {
           }
         }
       }
-      if (bossesKilled == 0 && cleared>=n*n/4) {
+      if (bossesKilled == 0 && cleared>=n*n/4) { // (force || cleared>=n*n/4)) {
         while (bossRow==currentRoomR() &&bossCol==currentRoomC() || bossRow==-1 || bossCol==-1) {
-          bossRow = (int)(random(n));
-          bossCol = (int)(random(n));
+          int changeTo = (int)(random(coordRooms.length));
+          for (int i=0; i<coordRooms.length; i++) {
+            if (rooms[currentRoomR() + coordRooms[i][0]][currentRoomC() + coordRooms[i][1]].getEnemies().size() == 0) {
+              changeTo = i;
+              break;
+            }
+          }
+          bossRow = currentRoomR() + coordRooms[changeTo][0];
+          bossCol = currentRoomC() + coordRooms[changeTo][1];
         }
         rooms[bossRow][bossCol] = new BossRoom(n, bossRow, bossCol, difficulty, player.getLevel(), 1);
         hasBoss = true;
       }
       if (bossesKilled == 1 && cleared >=n*n/2) {
         while (bossRow==currentRoomR() &&bossCol==currentRoomC() || bossRow==-1 || bossCol==-1) {
-          bossRow = (int)(random(n));
-          bossCol = (int)(random(n));
+          int changeTo = (int)(random(coordRooms.length));
+          for (int i=0; i<coordRooms.length; i++) {
+            if (rooms[currentRoomR() + coordRooms[i][0]][currentRoomC() + coordRooms[i][1]].getEnemies().size() == 0) {
+              changeTo = i;
+              break;
+            }
+          }
+          bossRow = currentRoomR() + coordRooms[changeTo][0];
+          bossCol = currentRoomC() + coordRooms[changeTo][1];
         }
         rooms[bossRow][bossCol] = new BossRoom(n, bossRow, bossCol, difficulty, player.getLevel(), 0);
         hasBoss = true;
       }
       if (bossesKilled == 2 && cleared >=n*n/1.33) {
         while (bossRow==currentRoomR() &&bossCol==currentRoomC() || bossRow==-1 || bossCol==-1) {
-          bossRow = (int)(random(n));
-          bossCol = (int)(random(n));
+          int changeTo = (int)(random(coordRooms.length));
+          for (int i=0; i<coordRooms.length; i++) {
+            if (rooms[currentRoomR() + coordRooms[i][0]][currentRoomC() + coordRooms[i][1]].getEnemies().size() == 0) {
+              changeTo = i;
+              break;
+            }
+          }
+          bossRow = currentRoomR() + coordRooms[changeTo][0];
+          bossCol = currentRoomC() + coordRooms[changeTo][1];
         }
         rooms[bossRow][bossCol] = new BossRoom(n, bossRow, bossCol, difficulty, player.getLevel(), 2);
         hasBoss = true;
       }
       if (bossesKilled == 3 && cleared >=n*n) {
         while (bossRow==currentRoomR() &&bossCol==currentRoomC() || bossRow==-1 || bossCol==-1) {
-          bossRow = (int)(random(n));
-          bossCol = (int)(random(n));
+          int changeTo = (int)(random(coordRooms.length));
+          for (int i=0; i<coordRooms.length; i++) {
+            if (rooms[currentRoomR() + coordRooms[i][0]][currentRoomC() + coordRooms[i][1]].getEnemies().size() == 0) {
+              changeTo = i;
+              break;
+            }
+          }
+          bossRow = currentRoomR() + coordRooms[changeTo][0];
+          bossCol = currentRoomC() + coordRooms[changeTo][1];
         }
         rooms[bossRow][bossCol] = new BossRoom(n, bossRow, bossCol, difficulty, player.getLevel(), 3);
         hasBoss = true;
