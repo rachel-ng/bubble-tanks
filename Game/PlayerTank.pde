@@ -25,13 +25,13 @@ public class PlayerTank extends BubbleTank {
     for (int i=0; i<blocks.size(); i++) {
       blocks.get(i).display();
     }
-    if (m.currentRoom.getEnemies().size() == 1) {
-      BubbleTank survivor = m.currentRoom.getEnemies().get(0);
-      float angle = atan2(-survivor.getY()+350, -survivor.getX()+350);
+    //if (m.currentRoom.getEnemies().size() == 1) {
+      //BubbleTank survivor = m.currentRoom.getEnemies().get(0);
+     // float angle = atan2(-survivor.getY()+350, -survivor.getX()+350);
   
       //fill(255, 190);
       //triangle(rotX(angle,350-7.5,350-2*getRadius(),350,350), rotY(angle,350-7.5,350-2*getRadius(),350,350), rotX(angle,350,350-2*getRadius()-15,350,350), rotY(angle,350,350-2*getRadius()-15,350,350), rotX(angle,350+7.5, 350-2*getRadius(),350,350), rotY(angle,350+7.5, 350-2*getRadius(),350,350));
-    }
+    //}
   }
 
   public void updatedType() {
