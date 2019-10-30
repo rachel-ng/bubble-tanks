@@ -166,7 +166,8 @@ void draw() {
       textAlign(LEFT);
       textFont(ptmono);
       textSize(12); 
-      text((int)(percentHealth*100) + "%", 56.5 + (int)(percentHealth*160), 736);
+      text((int)(percentHealth*100) + "%", 60 + (int)(percentHealth*160), 736);
+      //text((int)(percentHealth*100) + "%", 56.5 + (int)(percentHealth*160), 736);
     }
 
     // text for bubble points
@@ -181,11 +182,17 @@ void draw() {
       textFont(ptmono);
       textSize(12); 
       text((int)(percentPoint*100) + "%", 50 + (int)(percentPoint*160), 776);
-    } else {
+    } else if (percentPoint == 0) {
       textAlign(LEFT);
       textFont(ptmono);
       textSize(12);
       text((int)(percentPoint*100) + "%", 56.5 + (int)(percentPoint*160), 776);
+    }
+    else {
+      textAlign(LEFT);
+      textFont(ptmono);
+      textSize(12);
+      text((int)(percentPoint*100) + "%", 60 + (int)(percentPoint*160), 776);
     }
     
     int[][] coolDowns = tank.getCoolDowns();
