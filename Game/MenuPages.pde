@@ -160,8 +160,8 @@ public class MenuPages {
     textAlign(CENTER);
     textFont(bubble);
     text("map size", 350, 150); // starts at 107 ends at 150
-    textSize(24);
-    text("choose the size of your map", 350, 310);  
+    textSize(30);
+    text("choose the size of your map", 350, 325);  
 
     fill(255); // bar behind circles
     noStroke();
@@ -232,12 +232,12 @@ public class MenuPages {
 
       fill(242, 245, 252); // button to move to next page
       noStroke();
-      rect(200, 360, 300, 69);
+      rect(200, 380, 300, 69);
       fill(39, 150, 203);
       textAlign(CENTER);
       textFont(bubble);
       textSize(48); // 29
-      text("ok", 350, 407);
+      text("ok", 350, 429);
 
       if (mouseX > 200 && mouseX < 500 && mouseY > 360 & mouseY < 429) { 
         fill(211, 234, 244);
@@ -245,13 +245,13 @@ public class MenuPages {
         strokeJoin(MITER);
         strokeCap(SQUARE);
         stroke(255);
-        rect(200, 360, 300, 69);
+        rect(200, 380, 300, 69);
 
         fill(255);
         textAlign(CENTER);
         textFont(bubble);
         textSize(48); // 29
-        text("ok", 350, 407);
+        text("ok", 350, 429);
       }
     }
     backbutton();
@@ -397,20 +397,26 @@ public class MenuPages {
     
     textSize(24);
     if (useMouse) {
-      text("to move, use\n\n\n\nuse your MOUSE to aim and CLICK to shoot\n\nclick the map button to check\nwhere you've been\nthen click anywhere to exit", 350, 225);
+      text("to move, use", 350, 225);
+      text("your MOUSE to aim and CLICK to shoot\n\nuse the map to check where you've been\nthen click anywhere to exit", 350, 365);
     } else {
-      text("to move, use\n\n\n\nuse LEFT and RIGHT arrows to aim\n and SPACE to shoot\n\nclick the V button to toggle the map\n to check where you've been", 350, 225);
+      text("to move, use\n\n\n\n\nuse LEFT and RIGHT arrows to aim\n and SPACE to shoot\n\nclick the V button to toggle the map\nto check where you've been", 350, 225);
+      text("use LEFT and RIGHT arrows to aim\n and SPACE to shoot\n\nclick the V button to toggle the map\nto check where you've been", 350, 365);
     }
-    text("fight the other bubble tanks\n\n\nare used for missiles, stun, area burst,\nand your special attack\n\nclick anywhere to start", 350, 545); 
+    text("fight the other bubble tanks\n\n\nare used to upgrade and activate\nmissiles, stun, area burst,\nand your special attack", 350, 525); 
     
+    textSize(30);
+    text("click anywhere to start", 350, 750);
+     
     textSize(36);
-    text("w\na  s  d\n\n\n\n\n\n1 2 3 4\n", 350, 275);
+    text("w\na  s  d", 350, 275);
+    text("1 2 3 4", 350, 575);
     textSize(24);
 
     backbutton();
   }
 
-  void showmap () {
+  void showmap () { 
     fill(211, 234, 244);
     strokeWeight(5);
     strokeJoin(MITER);
