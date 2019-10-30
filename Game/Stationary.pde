@@ -31,10 +31,10 @@ public class Stationary extends BubbleTank {
     textAlign(CENTER);
     textFont(bubble);
     textSize(36); // 29
-    text("Boss Health", 350, 50);
-    rect(100, 50, 500, 30);
+    text("Boss Health", 350, 45);
+    rect(100, 60, 500, 30);
     fill(72, 139, 73);
-    rect(105, 52.5, 490*(getHealth()/getMaxHealth()), 25);
+    rect(105, 65, 490*(getHealth()/getMaxHealth()), 20);
     popMatrix();
   }
 
