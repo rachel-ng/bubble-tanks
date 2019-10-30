@@ -1,4 +1,4 @@
-# Bubble-Tanks-Final-Project
+# Bubble Tanks
 Jason Lin, Rachel Ng
 
 A top down shooter game with Bubble Tanks with different types of upgrades and enemies.
