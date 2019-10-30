@@ -1,7 +1,6 @@
 # Bubble Tanks
-Jason Lin, Rachel Ng
 
-A top down shooter game with Bubble Tanks with different types of upgrades and enemies.
+A top down shooter game with Bubble Tanks and different types of upgrades and enemies.
 
 [Demo video here](https://youtu.be/iz0xhgoWjT8)
 
