@@ -4,7 +4,7 @@ public class PlayerTank extends BubbleTank {
   color internal = color(214, 149, 9);
 
   // private int blaster, cannon, machinegun, missile, stunburst, areablast, superattack;
-
+d
   public PlayerTank(float health, float radius, int id, float speed,int type) {
     super(health, radius, id, speed);
 
@@ -29,8 +29,8 @@ public class PlayerTank extends BubbleTank {
       BubbleTank survivor = m.currentRoom.getEnemies().get(0);
       float angle = atan2(-survivor.getY()+350, -survivor.getX()+350);
   
-      fill(255, 190);
-      triangle(rotX(angle,350-7.5,350-2*getRadius(),350,350), rotY(angle,350-7.5,350-2*getRadius(),350,350), rotX(angle,350,350-2*getRadius()-15,350,350), rotY(angle,350,350-2*getRadius()-15,350,350), rotX(angle,350+7.5, 350-2*getRadius(),350,350), rotY(angle,350+7.5, 350-2*getRadius(),350,350));
+      //fill(255, 190);
+      //triangle(rotX(angle,350-7.5,350-2*getRadius(),350,350), rotY(angle,350-7.5,350-2*getRadius(),350,350), rotX(angle,350,350-2*getRadius()-15,350,350), rotY(angle,350,350-2*getRadius()-15,350,350), rotX(angle,350+7.5, 350-2*getRadius(),350,350), rotY(angle,350+7.5, 350-2*getRadius(),350,350));
     }
   }
 
